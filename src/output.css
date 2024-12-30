@@ -614,20 +614,12 @@ video {
   left: -0.25rem;
 }
 
-.right-0 {
-  right: 0px;
-}
-
 .-z-10 {
   z-index: -10;
 }
 
 .z-40 {
   z-index: 40;
-}
-
-.z-\[66\] {
-  z-index: 66;
 }
 
 .col-span-full {
@@ -761,6 +753,36 @@ video {
 
 .flex-1 {
   flex: 1 1 0%;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+.animate-fade-in {
+  animation: fadeIn .4s ease-in-out forwards;
+}
+
+@keyframes slideIn {
+  0% {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.animate-slide-in {
+  animation: slideIn .4s ease-in-out forwards;
 }
 
 .resize-none {
@@ -1169,6 +1191,22 @@ video {
   transition-duration: 150ms;
 }
 
+.animate-1 {
+  animation-delay: 100ms;
+}
+
+.animate-2 {
+  animation-delay: 200ms;
+}
+
+.animate-3 {
+  animation-delay: 300ms;
+}
+
+.animate-4 {
+  animation-delay: 400ms;
+}
+
 .\*\:col-start-1 > * {
   grid-column-start: 1;
 }
@@ -1301,10 +1339,6 @@ video {
     inset: 0px;
   }
 
-  .max-lg\:right-0 {
-    right: 0px;
-  }
-
   .max-lg\:z-50 {
     z-index: 50;
   }
@@ -1313,32 +1347,12 @@ video {
     margin-top: 2rem;
   }
 
-  .max-lg\:block {
-    display: block;
-  }
-
-  .max-lg\:inline-block {
-    display: inline-block;
-  }
-
-  .max-lg\:flex {
-    display: flex;
-  }
-
   .max-lg\:w-full {
     width: 100%;
   }
 
   .max-lg\:flex-col {
     flex-direction: column;
-  }
-
-  .max-lg\:items-center {
-    align-items: center;
-  }
-
-  .max-lg\:justify-center {
-    justify-content: center;
   }
 
   .max-lg\:divide-y-2 > :not([hidden]) ~ :not([hidden]) {
@@ -1355,26 +1369,12 @@ video {
     padding: 2rem;
   }
 
-  .max-lg\:text-2xl {
-    font-size: 1.5rem;
-    line-height: 2rem;
-  }
-
-  .max-lg\:hover\:bg-slate-950:hover {
-    --tw-bg-opacity: 1;
-    background-color: rgb(2 6 23 / var(--tw-bg-opacity, 1));
-  }
-
   .max-lg\:hover\:bg-white\/10:hover {
     background-color: rgb(255 255 255 / 0.1);
   }
 }
 
 @media not all and (min-width: 640px) {
-  .max-sm\:fixed {
-    position: fixed;
-  }
-
   .max-sm\:mb-4 {
     margin-bottom: 1rem;
   }
@@ -1555,10 +1555,6 @@ video {
 }
 
 @media (min-width: 1024px) {
-  .lg\:fixed {
-    position: fixed;
-  }
-
   .lg\:block {
     display: block;
   }
